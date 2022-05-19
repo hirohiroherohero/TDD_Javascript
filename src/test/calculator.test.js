@@ -28,6 +28,13 @@ describe('Calculator', () => {
         expect(cal.value).toBe(5)
     })
 
+    // Error는 expect의 콜백함수로 캐치
+    it('add Error', () => {
+        expect(() => {
+            cal.add(101)
+        }).toThrowError('Value can not be greater than 100')
+    })
+
     it('subtract', () => {
         cal.set(4)
         cal.subtract(3)
