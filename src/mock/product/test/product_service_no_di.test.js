@@ -2,6 +2,7 @@ const ProductService = require('../product_service_no_di.js');
 const ProductClient = require('../product_client.js');
 // ProductService를 테스트 하기위해 ProductClient가져오면 단위테스트로서 의미가 없어진다
 // 의존성 없이 테스트 하는게 단위테스트
+// ProductClient 모듈 전체 mock
 jest.mock('../product_client.js')
 
 describe('ProductService', () => {
